@@ -14,18 +14,18 @@
                         
                         {% if form.errors %}
                             <div class="alert alert-danger">
-                                <strong>Помилка!</strong> Невірний логін або пароль.
+                                <strong>Помилка!</strong> Невірний логін або пароль. Спробуйте ще раз.
                             </div>
                         {% endif %}
                         
                         <div class="form-group mb-3">
                             <label for="id_username">Логін</label>
-                            <input type="text" name="username" id="id_username" class="form-control" placeholder="Введіть логін">
+                            <input type="text" name="username" id="id_username" class="form-control" placeholder="Введіть логін" required>
                         </div>
                         
                         <div class="form-group mb-3">
                             <label for="id_password">Пароль</label>
-                            <input type="password" name="password" id="id_password" class="form-control" placeholder="Введіть пароль">
+                            <input type="password" name="password" id="id_password" class="form-control" placeholder="Введіть пароль" required>
                         </div>
                         
                         <button type="submit" class="btn btn-success btn-block w-100">Увійти</button>
