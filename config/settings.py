@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'app',
     'deliveries',
     'users',
+    'grades',
 ]
 
 MIDDLEWARE = [
