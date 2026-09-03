@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container mt-4">
+    <div class="card">
+        <div class="card-body">
+            <h2>{{ event.title }}</h2>
+            <p>{{ event.description|linebreaks }}</p>
+            <hr>
+            <p><strong>📅 Початок:</strong> {{ event.start_datetime|date:"d.m.Y H:i" }}</p>
+            <p><strong>📅 Закінчення:</strong> {{ event.end_datetime|date:"d.m.Y H:i" }}</p>
+            <p><strong>📍 Місце:</strong> {{ event.location }}</p>
+            <p><strong>👤 Організатор:</strong> {{ event.organizer.username }}</p>
+            
+            <a href="{% url 'events:list' %}" class="btn btn-secondary">← До списку</a>
+        </div>
+    </div>
+</div>
+{% endblock %}

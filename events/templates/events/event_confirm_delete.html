@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container mt-4">
+    <div class="card border-danger">
+        <div class="card-body">
+            <h4>⚠️ Ви впевнені, що хочете видалити подію?</h4>
+            <p><strong>{{ event.title }}</strong></p>
+            <p>{{ event.start_datetime|date:"d.m.Y H:i" }}</p>
+            
+            <form method="post">
+                {% csrf_token %}
+                <button type="submit" class="btn btn-danger">🗑️ Видалити</button>
+                <a href="{% url 'events:list' %}" class="btn btn-secondary">↩️ Відміна</a>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %}

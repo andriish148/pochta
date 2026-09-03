@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'deliveries',
     'users',
     'grades',
+    'events',
 ]
 
 MIDDLEWARE = [

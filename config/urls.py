@@ -11,7 +11,9 @@ urlpatterns = [
     path('', TemplateView.as_view(template_name='home.html'), name='home'),
     path('users/', include('users.urls')),
     path('login/', LoginView.as_view(template_name='users/login.html'), name='login'),
-    path('logout/', logout_view, name='logout'),  # ← кастомний вихід
+    path('logout/', logout_view, name='logout'),  
+    path('grades/', include('grades.urls')),
+    path('events/', include('events.urls')),
 ]
 
 if settings.DEBUG:
